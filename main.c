@@ -12,8 +12,8 @@
 #define MOSI PB2	//pin 51 - 14 DS - Serial Data
 #define LT PB0 		//pin 53 - 12 STCP - Latch Clock
 
-#define LT_ON PORTB |= (1<<PB0)
-#define LT_OFF PORTB &= ~(1<<PB0)
+#define LATCH_ON PORTB |= (1<<PB0)
+#define LATCH_OFF PORTB &= ~(1<<PB0)
 
 void InitSpi(void);
 void SendSpi(uint8_t bajt);
@@ -62,6 +62,6 @@ void SendSpi(uint8_t bajt)	{
 	SPDR = bajt;
 	while( !(SPSR & (1<<SPIF)) );
 
-	LT_ON;
-	LT_OFF;
+	LATCH_ON;
+	LATCH_OFF;
 }
