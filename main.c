@@ -1,5 +1,20 @@
-/* Shif register 74HC595
- *
+/* 	Project: Shif register 74HC595
+ *	Board: Arduino Mega
+ *	Proc: Atmega 2560
+ *	Author: Michal Kielan
+ *	data: 10.11.2013
+ *	notes: Q0-Q7 - led conecting
+ *	       OE - do kaskady (chyba??)	
+ *	
+ *	    74HC595
+ *      Q1 |1     16|-> VCC (+5V)
+ *      Q2 |2     15| Q0
+ *      Q3 |3     14|-> DS (pin 51)
+ *      .  |4     13|-> OE
+ *      .  |5     12|-> ST_CP (pin 12)
+ *      .  |6     11|-> SH_CP (pin 52)
+ *      .  |7     10|-> MR
+ *     GND |8      9| Q7'
  *
  */
 
